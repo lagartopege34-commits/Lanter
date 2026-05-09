@@ -31,6 +31,8 @@ console.log(data);
             habilidad: personaje.Habilidad || 'Sin habilidad',
             descripcion: personaje.Descripcion || 'Sin descripción',
             arma: personaje.Arma || 'Sin arma',
+            armaImagen: personaje.ArmaImagen || 'https://placehold.co/400x400/111827/FFFFFF?text=Arma',
+  armaInfo: personaje.ArmaInfo || 'Sin estadísticas de arma',
             imagen:
               personaje.Imagen ||
               'https://placehold.co/600x800/111827/FFFFFF?text=Personaje',
@@ -147,13 +149,27 @@ console.log(data);
                   </p>
 
                   <div>
-                    <p className="text-sm uppercase tracking-widest text-gray-500 mb-2">
-                      Arma Principal
-                    </p>
-                    <div className="inline-flex rounded-xl bg-white/5 border border-white/10 px-4 py-2 text-sm">
-                      {p.arma}
-                    </div>
-                  </div>
+  <p className="text-sm uppercase tracking-widest text-gray-500 mb-2">
+    Arma Principal
+  </p>
+  
+  {/* Imagen nueva */}
+  <img
+    src={p.armaImagen}
+    alt={p.arma}
+    className="w-full h-32 object-cover rounded-2xl border border-white/10 bg-black/40 mb-3"
+  />
+
+  {/* El nombre exactamente como lo tenías antes */}
+  <div className="inline-flex rounded-xl bg-white/5 border border-white/10 px-4 py-2 text-sm">
+    {p.arma}
+  </div>
+
+  {/* Info nueva abajo */}
+  <p className="mt-2 text-sm text-gray-400 italic">
+    {p.armaInfo}
+  </p>
+</div>
 
                   <div>
                     <p className="text-sm uppercase tracking-widest text-emerald-400 mb-3">

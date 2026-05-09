@@ -34,9 +34,7 @@ console.log(data);
             imagen:
               personaje.Imagen ||
               'https://placehold.co/600x800/111827/FFFFFF?text=Personaje',
-              gemaImagen:
-  personaje.GemaImagen ||
-  'https://placehold.co/100x100/png',
+              gemaImagen: personaje.GemaImagen || 'https://placehold.co/200x200/111827/00FFFF?text=Gema',
             ventajas: personaje.Ventajas
               ? personaje.Ventajas.split(',')
               : [],

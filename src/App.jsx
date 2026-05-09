@@ -38,6 +38,7 @@ console.log(data);
               'https://placehold.co/600x800/111827/FFFFFF?text=Personaje',
               gemaImagen: personaje.GemaImagen || 'https://placehold.co/200x200/111827/00FFFF?text=Gema',
               gemaHabilidad: personaje.GemaHabilidad || 'Sin poder despertado',
+              subHabilidades: personaje.SubHabilidades || 'Ninguna detectada',
             ventajas: personaje.Ventajas
               ? personaje.Ventajas.split(',')
               : [],
@@ -207,6 +208,19 @@ console.log(data);
                       ))}
                     </div>
                   </div>
+                  {/* --- SECCIÓN SUB-HABILIDADES (DORADO) --- */}
+<div className="mt-6 pt-6 border-t border-yellow-500/20">
+  <p className="text-xs uppercase tracking-[0.2em] text-yellow-500 font-black mb-2 flex items-center gap-2">
+    <span className="w-2 h-2 rounded-full bg-yellow-500 animate-pulse" />
+    Sub-Habilidades
+  </p>
+  
+  <div className="bg-gradient-to-r from-yellow-500/10 to-transparent border-l-2 border-yellow-500 px-4 py-3 rounded-r-xl">
+    <p className="text-amber-100 text-sm leading-relaxed font-medium">
+      {p.subHabilidades}
+    </p>
+  </div>
+</div>
                 </div>
               </div>
             </div>

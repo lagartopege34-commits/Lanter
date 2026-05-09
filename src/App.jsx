@@ -34,6 +34,9 @@ console.log(data);
             imagen:
               personaje.Imagen ||
               'https://placehold.co/600x800/111827/FFFFFF?text=Personaje',
+              gemaImagen:
+              personaje.GemaImagen ||
+            'https://placehold.co/100x100/png',
             ventajas: personaje.Ventajas
               ? personaje.Ventajas.split(',')
               : [],
@@ -115,6 +118,17 @@ console.log(data);
                 </div>
 
                 <div className="mt-6 space-y-5">
+                  <div>
+                     <p className="text-sm uppercase tracking-widest text-cyan-400 mb-3">
+                       Gema
+                 </p>
+
+                  <img
+                   src={p.gemaImagen}
+                    alt="Gema"
+                  className="w-24 h-24 object-cover rounded-2xl border border-cyan-500/30 bg-black/40"
+                 />
+                  </div>
                   <div>
                     <p className="text-sm uppercase tracking-widest text-gray-500">
                       Habilidad

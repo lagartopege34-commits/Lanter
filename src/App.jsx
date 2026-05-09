@@ -149,28 +149,31 @@ console.log(data);
                   </p>
 
                   <div>
-  <p className="text-sm uppercase tracking-widest text-gray-500 mb-2">
+  <p className="text-sm uppercase tracking-widest text-gray-500 mb-3">
     Arma Principal
   </p>
   
-  {/* Imagen nueva */}
-  <img
-    src={p.armaImagen}
-    alt={p.arma}
-    className="w-full h-32 object-cover rounded-2xl border border-white/10 bg-black/40 mb-3"
-  />
+  <div className="space-y-3">
+    {/* Contenedor con tamaño fijo para que nada se mueva */}
+    <div className="w-full h-48 bg-black/40 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
+      <img
+        src={p.armaImagen}
+        alt={p.arma}
+        className="max-w-full max-h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" 
+      />
+    </div>
+    
+    {/* Nombre del Arma */}
+    <div className="inline-flex rounded-xl bg-white/5 border border-white/10 px-4 py-2 text-sm font-bold text-white">
+      {p.arma}
+    </div>
 
-  {/* El nombre exactamente como lo tenías antes */}
-  <div className="inline-flex rounded-xl bg-white/5 border border-white/10 px-4 py-2 text-sm">
-    {p.arma}
+    {/* Descripción o Stats del Arma */}
+    <p className="text-sm text-gray-400 italic leading-relaxed">
+      {p.armaInfo}
+    </p>
   </div>
-
-  {/* Info nueva abajo */}
-  <p className="mt-2 text-sm text-gray-400 italic">
-    {p.armaInfo}
-  </p>
 </div>
-
                   <div>
                     <p className="text-sm uppercase tracking-widest text-emerald-400 mb-3">
                       Ventajas

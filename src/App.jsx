@@ -153,25 +153,25 @@ console.log(data);
     Arma Principal
   </p>
   
-  <div className="space-y-3">
-    {/* Contenedor con tamaño fijo para que nada se mueva */}
-    <div className="w-full h-48 bg-black/40 rounded-2xl border border-white/10 overflow-hidden flex items-center justify-center p-2">
+  <div className="flex gap-4 items-start bg-white/5 border border-white/10 rounded-2xl p-3">
+    {/* Contenedor de la imagen: Ajustado al ancho de la espada */}
+    <div className="w-24 h-32 bg-white rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center">
       <img
         src={p.armaImagen}
         alt={p.arma}
-        className="max-w-full max-h-full object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]" 
+        className="max-w-full max-h-full object-contain"
       />
     </div>
     
-    {/* Nombre del Arma */}
-    <div className="inline-flex rounded-xl bg-white/5 border border-white/10 px-4 py-2 text-sm font-bold text-white">
-      {p.arma}
+    {/* Contenedor del texto: Rellena el espacio sobrante */}
+    <div className="flex flex-col justify-center self-center">
+      <div className="text-lg font-bold text-white leading-tight">
+        {p.arma}
+      </div>
+      <p className="mt-2 text-sm text-gray-400 italic leading-snug">
+        {p.armaInfo}
+      </p>
     </div>
-
-    {/* Descripción o Stats del Arma */}
-    <p className="text-sm text-gray-400 italic leading-relaxed">
-      {p.armaInfo}
-    </p>
   </div>
 </div>
                   <div>

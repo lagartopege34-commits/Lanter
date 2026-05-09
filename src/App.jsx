@@ -35,6 +35,7 @@ console.log(data);
               personaje.Imagen ||
               'https://placehold.co/600x800/111827/FFFFFF?text=Personaje',
               gemaImagen: personaje.GemaImagen || 'https://placehold.co/200x200/111827/00FFFF?text=Gema',
+              gemaHabilidad: personaje.GemaHabilidad || 'Sin poder despertado',
             ventajas: personaje.Ventajas
               ? personaje.Ventajas.split(',')
               : [],
@@ -126,7 +127,12 @@ console.log(data);
                     alt="Gema"
                   className="w-24 h-24 object-cover rounded-2xl border border-cyan-500/30 bg-black/40"
                  />
-                  </div>
+                 
+                 <p className="mt-2 text-sm italic text-cyan-200/80 font-medium">
+                   ✨ {p.gemaHabilidad}
+                    </p>
+                   </div>     
+                  
                   <div>
                     <p className="text-sm uppercase tracking-widest text-gray-500">
                       Habilidad
